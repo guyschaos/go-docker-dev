@@ -24,6 +24,9 @@ Plugin 'scrooloose/nerdcommenter'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" change leader key
+let mapleader = ','
+
 " general customizations
 syntax on
 set ts=4
