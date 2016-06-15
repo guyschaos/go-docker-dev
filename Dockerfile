@@ -5,7 +5,7 @@ ADD fs/ /
 
 # install pagkages
 RUN apt-get update                                                      && \
-    apt-get install -y ncurses-dev libtolua-dev exuberant-ctags         && \
+    apt-get install -y ncurses-dev libtolua-dev exuberant-ctags tmux    && \
     ln -s /usr/include/lua5.2/ /usr/include/lua                         && \
     ln -s /usr/lib/x86_64-linux-gnu/liblua5.2.so /usr/lib/liblua.so     && \
     cd /tmp                                                             && \
@@ -27,6 +27,7 @@ RUN apt-get update                                                      && \
     go get github.com/kisielk/errcheck                                  && \
     go get github.com/jstemmer/gotags                                   && \
     go get -u github.com/gpmgo/gopm                                     && \
+    go get github.com/tools/godep                                       && \
     mv /go/bin/* /usr/local/go/bin                                      && \
 # add dev user
     adduser dev --disabled-password --gecos ""                          && \
