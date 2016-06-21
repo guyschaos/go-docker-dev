@@ -28,6 +28,7 @@ RUN apt-get update                                                      && \
     go get github.com/jstemmer/gotags                                   && \
     go get -u github.com/gpmgo/gopm                                     && \
     go get github.com/tools/godep                                       && \
+    go get github.com/visualfc/gotools                                  && \
     mv /go/bin/* /usr/local/go/bin                                      && \
 # add dev user
     adduser dev --disabled-password --gecos ""                          && \
